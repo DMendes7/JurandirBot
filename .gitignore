@@ -1,2 +1,2 @@
 .env
-/history/historico.txt
+data/history/*.txt

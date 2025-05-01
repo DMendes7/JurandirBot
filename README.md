@@ -12,9 +12,9 @@ Me programaram com um jeitão carismático, mas com os parafuso tudo apertado co
 ## 📚 O que eu faço?
 
 - 🧠 Respondo perguntas com base nos PDFs da pasta `data/`
-- 🤓 Mantenho o **histórico de tudo que você me pergunta** (pra não ter que repetir igual vó com neto)
+- 🤓 Mantenho o **histórico da conversa** para lembrar das resenhas antigas
 - 💬 Falo como um bom mineiro velho: direto, educado e sempre disposto a ajudar
-- 🔧 Sou movido a LLaMA 3 com Groq, mas com coração de avô e voz de professor de cursinho
+- 🔧 Rodo tanto no **terminal (modo CLI)** quanto em uma **interface web com Streamlit**
 
 ---
 
@@ -27,28 +27,34 @@ A turma aqui tá testando umas tecnologias novas aprendidas num curso arretado s
 
 ## 🛠️ Como usar o JurandirBot?
 
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/seu-usuario/JurandirBot.git
-   cd JurandirBot
-   ```
+### ✅ Modo Web (Recomendado)
 
-2. Instale as dependências:
+1. Instale as dependências:
    ```bash
    pip install -r requirements.txt
    ```
 
-3. Crie o arquivo `.env` e coloque sua chave da Groq:
+2. Crie o arquivo `.env` e coloque sua chave da Groq:
    ```
    GROQ_API_KEY=sua_chave_aqui
    ```
 
-4. Coloque seus PDFs na pasta `data/`
+3. Coloque seus PDFs na pasta `data/`
 
-5. E roda eu aí:
+4. Rode com interface gráfica:
    ```bash
-   python main.py
+   streamlit run app.py
    ```
+
+---
+
+### 💻 Modo Terminal (alternativo)
+
+Se preferir o modo raizão via terminal:
+
+```bash
+python functions/main.py
+```
 
 ---
 
@@ -62,10 +68,11 @@ JurandirBot/
 │       └── historico.txt
 ├── functions/
 │   ├── loader.py
-│   └── chat_logic.py
+│   ├── chat_logic.py
+│   └── main.py         # versão terminal do Jurandir
 ├── img/
 │   └── Jurandir.png
-├── main.py
+├── app.py              # versão web com Streamlit
 ├── .env
 ├── requirements.txt
 └── README.md
